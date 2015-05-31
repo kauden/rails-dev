@@ -47,8 +47,10 @@ RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc && \
 
 ADD asset/init.sh /opt/init.sh
 ADD asset/wkhtmltopdf-0.11 /usr/local/bin/wkhtmltopdf
+ADD asset/ror /bin/ror
 
 RUN chmod 755 /opt/init.sh && \
+    chmod 755 /bin/ror && \
     mkdir /root/.ssh && \
     groupadd -g 1002 -r rails && \
     useradd -r -u 1002 -g 1002 -s /bin/bash -d /home/rails -m rails && \
