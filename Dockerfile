@@ -4,7 +4,7 @@ MAINTAINER Thierry Corbin <thierry.corbin@kauden.fr>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV RUBY_VERSION 2.2.2
+ENV RUBY_VERSION 2.2.3
 
 RUN apt-get update && \
     apt-get -y install git-core \
@@ -54,8 +54,8 @@ ADD asset/ror /bin/ror
 RUN chmod 755 /opt/init.sh && \
     chmod 755 /bin/ror && \
     mkdir /root/.ssh && \
-    groupadd -g 1002 -r rails && \
-    useradd -r -u 1002 -g 1002 -s /bin/bash -d /home/rails -m rails && \
+    groupadd -g 501 -r rails && \
+    useradd -r -u 501 -g 501 -s /bin/bash -d /home/rails -m rails && \
     mkdir /site && \
     chown rails:rails /site
 
