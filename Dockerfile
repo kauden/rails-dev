@@ -4,10 +4,11 @@ MAINTAINER Thierry Corbin <thierry.corbin@kauden.fr>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV RUBY_VERSION 2.2.2
+ENV RUBY_VERSION 2.2.3
 
 RUN apt-get update && \
-    apt-get -y install git-core \
+    apt-get -y install \
+    git-core \
     curl \
     zlib1g-dev \
     build-essential \
