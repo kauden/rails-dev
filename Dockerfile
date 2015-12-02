@@ -55,8 +55,8 @@ ADD asset/ror /bin/ror
 RUN chmod 755 /opt/init.sh && \
     chmod 755 /bin/ror && \
     mkdir /root/.ssh && \
-    groupadd -g 1002 -r rails && \
-    useradd -r -u 1002 -g 1002 -s /bin/bash -d /home/rails -m rails && \
+    groupadd -g 501 -r rails && \
+    useradd -r -u 501 -g 501 -s /bin/bash -d /home/rails -m rails && \
     mkdir /site && \
     chown rails:rails /site
 
